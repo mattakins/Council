@@ -1,0 +1,23 @@
+{
+  "name": "mattakins",
+  "owner": {
+    "name": "Matt"
+  },
+  "description": "Agent plugins published by mattakins.",
+  "plugins": [
+    {
+      "name": "council",
+      "source": "./plugins/council",
+      "description": "Multi-agent decision framework that convenes parallel advisors and synthesizes a recommendation",
+      "version": "1.0.0",
+      "author": {
+        "name": "Matt"
+      },
+      "homepage": "https://github.com/mattakins/council",
+      "repository": "https://github.com/mattakins/council",
+      "license": "MIT",
+      "keywords": ["council", "multi-agent", "decision", "advisor", "research"],
+      "category": "Productivity"
+    }
+  ]
+}

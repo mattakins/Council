@@ -1,0 +1,28 @@
+{
+  "name": "council",
+  "version": "1.0.0",
+  "description": "Multi-agent decision framework that convenes parallel advisors and synthesizes a recommendation.",
+  "author": {
+    "name": "Matt",
+    "url": "https://github.com/mattakins"
+  },
+  "homepage": "https://github.com/mattakins/council",
+  "repository": "https://github.com/mattakins/council",
+  "license": "MIT",
+  "keywords": ["council", "multi-agent", "decision", "advisor", "research"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Council",
+    "shortDescription": "Convene parallel advisors for difficult decisions.",
+    "longDescription": "Analyze a decision through independent expert perspectives, synthesize consensus and dissent, and produce a direct recommendation.",
+    "developerName": "Matt",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Research"],
+    "websiteURL": "https://github.com/mattakins/council",
+    "defaultPrompt": [
+      "Convene a council to evaluate this decision.",
+      "Give me independent perspectives on this tradeoff.",
+      "Run a deep council with current research."
+    ]
+  }
+}

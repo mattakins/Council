@@ -1,0 +1,14 @@
+{
+  "name": "council",
+  "version": "1.0.0",
+  "description": "Multi-agent decision framework that convenes parallel advisors and synthesizes a recommendation.",
+  "author": {
+    "name": "Matt",
+    "url": "https://github.com/mattakins"
+  },
+  "homepage": "https://github.com/mattakins/council",
+  "repository": "https://github.com/mattakins/council",
+  "license": "MIT",
+  "keywords": ["council", "multi-agent", "decision", "advisor", "research"],
+  "skills": "./skills/"
+}
