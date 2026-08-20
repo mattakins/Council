@@ -99,6 +99,8 @@ Use your sub-agent feature to spawn advisors independently.
 - Other Agent Skills-compatible tools: use the closest available sub-agent feature.
 
 Rules:
+- Spawn every advisor with fresh, isolated context. Do not inherit or forward the parent conversation.
+- Give each advisor only its assigned perspective, the core question, and any attached images or raw data needed to answer it.
 - Advisors must be blind to each other's opinions.
 - Run advisors in parallel.
 - If the requested advisor count exceeds your concurrency limit, run advisors in batches while preserving independence.
