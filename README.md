@@ -2,6 +2,8 @@
 
 A multi-agent decision framework for Claude Code and Codex. Spawns parallel expert advisors from diverse perspectives, synthesizes their views through a neutral Chairman, and delivers an opinionated final take — all in one command.
 
+Inspired by [Andrej Karpathy's LLM Council](https://github.com/karpathy/llm-council), adapted for the native subagents in Claude Code and Codex.
+
 ```text
 Claude: /council:council should we rewrite this service in Rust?
 Codex:  $council:council deep what's the commercial viability of this app right now?
