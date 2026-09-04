@@ -1,8 +1,12 @@
 # Council
 
-A multi-agent decision framework for Claude Code and Codex. Spawns parallel expert advisors from diverse perspectives, synthesizes their views through a neutral Chairman, and delivers an opinionated final take — all in one command.
+A multi-agent decision framework skill for Codex, Claude Code, OpenCode, Cursor, ChatGPT Work, or any other harness that supports subagents.
 
-Inspired by [Andrej Karpathy's LLM Council](https://github.com/karpathy/llm-council), adapted for the native subagents in Claude Code and Codex.
+*Council* spawns parallel isolated expert advisor subagents with diverse perspectives, synthesizes their views through a neutral Chairman, and delivers an opinionated final take.
+
+Use it for architectural calls, product and marketing decisions, naming debates — any decision worth more than one perspective.
+
+Inspired by [Karpathy's LLM Council](https://github.com/karpathy/llm-council).
 
 ```text
 Claude: /council:council should we rewrite this service in Rust?
@@ -57,14 +61,16 @@ Clone or copy `plugins/council/skills/council` into one of these supported locat
 | `<council> 3 <question>` | Use 3 agents |
 | `<council> 7 <question>` | Use 7 agents |
 | `<council> deep <question>` | Research + 7 agents + Chairman (full treatment) |
+| `<council> research <question>` | Explicitly enable research |
+| `<council> no research <question>` | Skip research, reasoning only |
 | `<council> "SEO, legal, UX" <question>` | Specify perspectives explicitly |
 | `<council> quick <question>` | Skip Chairman, faster output |
 | `<council> no chairman <question>` | Same as quick |
 | `<council> save <question>` | Write output to `council-YYYY-MM-DD-<slug>.md` |
-| `<council> opus <question>` | Force Opus for Claude Code agents |
-| `<council> sonnet <question>` | Force Sonnet for Claude Code agents |
+| `<council> opus <question>` | Run all advisors on Opus (any named model works if your harness supports per-subagent overrides) |
+| `<council> sonnet <question>` | Run all advisors on Sonnet |
 
-Replace `<council>` with `/council:council` for the Claude plugin or `$council:council` for the Codex plugin. Flags combine.
+Replace `<council>` with `/council:council` for the Claude plugin or `$council:council` for the Codex plugin. Flags combine, and options also work as plain language — e.g. `use 4 advisors, no research, and save: <question>`.
 
 ---
 
@@ -81,8 +87,6 @@ Replace `<council>` with `/council:council` for the Claude plugin or `$council:c
 ## Output structure
 
 ```
-📡 Research mode auto-enabled.   ← when auto-triggered
-
 Chairman's Verdict:
 [Definitive synthesis]
 
@@ -105,9 +109,10 @@ Next step: ...
 | Claude Code | ✅ | Plugin or `~/.claude/skills/council/` |
 | OpenAI Codex | ✅ | Plugin or `~/.agents/skills/council/` |
 | OpenCode | ✅ | `~/.agents/skills/council/` or native OpenCode path |
-| Other Agent Skills clients | Conditional | Requires parallel subagent support |
+| Cursor | ✅ | Agent Skills install (`npx skills add`) |
+| Other harnesses | Conditional | Requires parallel subagent support |
 
-The instruction format follows the open Agent Skills specification. Full behavior requires a client that can launch parallel, isolated subagents.
+The instruction format follows the open Agent Skills specification. Full behavior requires a harness that can launch parallel, isolated subagents.
 
 ---
 

@@ -27,8 +27,8 @@ Options:
   quick, <question>                  # Alias for "no chairman"
   deep, <question>                   # Research + 7 advisors + Chairman
   save, <question>                   # Write output to council-YYYY-MM-DD-<slug>.md
-  opus, <question>                   # Force Opus model for all agents (Claude Code only)
-  sonnet, <question>                 # Force Sonnet model for all agents (Claude Code only)
+  opus, <question>                   # Force Opus model for all agents
+  sonnet, <question>                 # Force Sonnet model for all agents
 ```
 
 Options accept natural language and can be combined in any order. Examples:
@@ -55,7 +55,7 @@ Recognize:
 - **Deep mode:** `deep`, `full treatment`, `thorough analysis` (defaults to research + 7 advisors + Chairman)
 - **Save output:** `save`, `write this to a file`, `keep a markdown copy`
 - **Perspectives:** quoted lists or natural language such as `from legal, UX, and engineering perspectives`
-- **Model override:** In Claude Code, recognize explicit `opus` or `sonnet` requests. In Codex or other tools, inherit the current model unless the user explicitly requests a supported override.
+- **Model override:** If the user explicitly names a model to use for subagents (e.g. `opus`, `sonnet`, `sol`, `terra`) and your harness supports subagent model overrides, apply that model to every advisor you spawn. Otherwise ignore the request and inherit the current model.
 - **Images:** If the user included screenshots, designs, mockups, or other images, include the actual images in advisor prompts.
 
 Explicit user instructions override presets and automatic detection. For example, `deep, 4 agents` uses four advisors, and `deep, no research` disables research. Remove recognized options from the request, then treat the remaining text as the core question or decision. If wording is ambiguous, use the most reasonable interpretation instead of requiring exact flag syntax.
@@ -74,7 +74,7 @@ Do NOT require an explicit `research` flag. Infer from the question whether agen
 - Commercial viability, go-to-market, fundraising, or investment
 - Anything where a factual, up-to-date answer is better than reasoning alone
 
-When research is auto-enabled, print: `📡 Research mode auto-enabled.` before the council results.
+When you auto-enable research, tell the user up front that each advisor will do research independently — then spawn the advisors.
 
 If the question is clearly conceptual or internal (architecture choices, code design, naming, etc.), skip research.
 
