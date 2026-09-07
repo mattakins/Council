@@ -205,3 +205,15 @@ pre code { font: inherit; }
   .site-footer p { font-size: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.compatibility a { display: inline-flex; align-items: center; min-height: 44px; margin-block: -10px; text-decoration-color: var(--rule); }
+.compatibility a:hover { text-decoration-color: var(--blue); }
+.quick-install { width: min(560px, calc(100% - 32px)); padding: 32px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); color: var(--ink); }
+.quick-install::backdrop { background: rgb(0 0 0 / .3); }
+.quick-install h2 { font: 700 26px/1.2 var(--body); letter-spacing: -.035em; padding-right: 30px; }
+.quick-install pre { padding: 18px; margin-top: 24px; border: 1px solid var(--rule); border-radius: 3px; font-size: 15px; user-select: all; }
+.dialog-close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; border: 0; background: transparent; color: var(--muted); font-size: 28px; }
+#quick-install-status { margin-top: 18px; color: var(--blue); font-size: 16px; line-height: 1.5; }
+.quick-install-note { font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
+#quick-install-copy { margin-top: 22px; }
+@media (max-width: 760px) { .quick-install { padding: 25px 20px; } .quick-install pre { font-size: 13px; padding: 14px; } }

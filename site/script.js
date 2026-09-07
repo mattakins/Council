@@ -105,4 +105,35 @@
       button.resetTimer = setTimeout(() => { label.textContent = 'Copy commands'; }, 2200);
     });
   });
+  const quickDialog = document.querySelector('.quick-install');
+  const quickCommand = document.querySelector('#quick-install-command');
+  const quickStatus = document.querySelector('#quick-install-status');
+  let copyRequest = 0;
+  async function copyQuickInstall() {
+    const request = ++copyRequest;
+    quickStatus.textContent = 'Copying…';
+    try {
+      await navigator.clipboard.writeText(quickCommand.textContent);
+      if (request === copyRequest) quickStatus.textContent = '✓ Copied to clipboard';
+    } catch {
+      if (request === copyRequest) quickStatus.textContent = 'Couldn’t copy automatically. Select the command above to copy it.';
+    }
+  }
+  document.querySelectorAll('[data-quick-install]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const agent = link.textContent.trim();
+      quickCommand.textContent = document.querySelector(`#commands-${link.dataset.quickInstall}`).textContent.trim();
+      document.querySelector('#quick-install-title').textContent = `Install for ${agent}`;
+      document.querySelector('#quick-install-note').textContent = link.dataset.quickInstall === 'other'
+        ? `Select ${agent} when the installer asks which agents to use.` : '';
+      quickDialog.showModal();
+      copyQuickInstall();
+    });
+  });
+  document.querySelector('#quick-install-copy').addEventListener('click', copyQuickInstall);
+  quickDialog.addEventListener('click', event => {
+    const rect = quickDialog.getBoundingClientRect();
+    if (event.target === quickDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) quickDialog.close();
+  });
 })();

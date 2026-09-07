@@ -48,7 +48,12 @@
 
     <div class="compatibility wrap" role="group" aria-label="Compatible agents">
       <p>Works where you work.</p>
-      <ul><li>Claude Code</li><li>Codex</li><li>OpenCode</li><li>Cursor</li></ul>
+      <ul>
+        <li><a href="#install" data-quick-install="claude">Claude Code</a></li>
+        <li><a href="#install" data-quick-install="codex">Codex</a></li>
+        <li><a href="#install" data-quick-install="other">OpenCode</a></li>
+        <li><a href="#install" data-quick-install="other">Cursor</a></li>
+      </ul>
     </div>
 
     <section class="how-section wrap" id="how-it-works" aria-labelledby="how-title">
@@ -202,5 +207,13 @@ codex plugin add council@mattakins</code></pre>
     </div>
     <p>Made by <a href="https://github.com/mattakins">Matt Akins</a>. Inspired by <a href="https://github.com/karpathy/llm-council">Karpathy’s LLM Council</a>.</p>
   </footer>
+  <dialog class="quick-install" aria-labelledby="quick-install-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Close install popup">×</button></form>
+    <h2 id="quick-install-title">Install Council</h2>
+    <pre><code id="quick-install-command"></code></pre>
+    <p id="quick-install-status" role="status" aria-live="polite"></p>
+    <p id="quick-install-note" class="quick-install-note"></p>
+    <button type="button" class="copy-button" id="quick-install-copy">Copy again</button>
+  </dialog>
 </body>
 </html>
