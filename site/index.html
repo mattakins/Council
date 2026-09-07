@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0f0f0">
+  <meta name="description" content="Five independent advisors. One clear recommendation. Council is an open-source skill for decisions worth more than one perspective.">
+  <meta property="og:title" content="Council — A little more perspective.">
+  <meta property="og:description" content="Independent perspectives, useful disagreement, and a clear next step. Install Council in your agent.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mattakins.github.io/Council/assets/council-brand.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Council — A little more perspective.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#" aria-label="Council home">council</a>
+    <nav aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#examples">Examples</a>
+      <a href="#install">Install</a>
+      <a class="github-link" href="https://github.com/mattakins/Council">GitHub <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">A little more<br>perspective.</h1>
+        <p class="hero-lead">Five independent advisors.<br>One clear recommendation.</p>
+        <p class="hero-description">Council brings different perspectives to your agent, weighs the tradeoffs, and gives you a next step.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#install">Install Council</a>
+          <a class="text-link" href="#examples">See an example</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="180 145 1150 620" role="img" aria-labelledby="advisors-title">
+          <title id="advisors-title">Three confident robot advisors in blue, each looking from a different perspective.</title>
+          <image href="assets/council-brand.png" width="1536" height="1024"/>
+        </svg>
+      </div>
+    </section>
+
+    <div class="compatibility wrap" role="group" aria-label="Compatible agents">
+      <p>Works where you work.</p>
+      <ul><li>Claude Code</li><li>Codex</li><li>OpenCode</li><li>Cursor</li></ul>
+    </div>
+
+    <section class="how-section wrap" id="how-it-works" aria-labelledby="how-title">
+      <h2 id="how-title">Independent minds.<br>Useful disagreements.</h2>
+      <ol class="process">
+        <li><span class="step-number" aria-hidden="true">01</span><div><h3>Ask the question</h3><p>Bring a decision. Council chooses relevant perspectives, or you name your own.</p></div></li>
+        <li><span class="step-number" aria-hidden="true">02</span><div><h3>Hear the room</h3><p>Five advisors work independently. Each sees the question, not the others’ answers.</p></div></li>
+        <li><span class="step-number" aria-hidden="true">03</span><div><h3>Make the call</h3><p>The Chairman weighs the tradeoffs. Your agent adds its own take and a next step.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="examples wrap" id="examples" aria-label="Council examples">
+      <div class="example-toolbar">
+        <div class="example-links" role="group" aria-label="Choose an example">
+          <a href="#example-architecture" data-example-link="0" aria-current="true">Architecture</a>
+          <a href="#example-product" data-example-link="1">Product</a>
+          <a href="#example-naming" data-example-link="2">Naming</a>
+        </div>
+        <span class="example-label">Illustrative output</span>
+      </div>
+      <div class="example-track" id="example-track" tabindex="0" role="region" aria-label="Three examples. Scroll horizontally or use the arrow buttons.">
+        <article class="example-slide" id="example-architecture" aria-labelledby="architecture-question">
+          <h3 class="example-question" id="architecture-question">Should we rewrite this service?</h3>
+          <table>
+            <caption class="sr-only">Architecture example: five independent perspectives</caption>
+            <thead><tr><th scope="col">Perspective</th><th scope="col">Recommendation</th><th scope="col">Position</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Performance</th><td>Profile the bottleneck first.</td><td>Refactor</td></tr>
+              <tr><th scope="row">Security</th><td>Migrate one boundary at a time.</td><td>Refactor</td></tr>
+              <tr class="dissent"><th scope="row">Maintenance</th><td>A clean rewrite could simplify ownership.</td><td>Rewrite <span class="sr-only">— dissent</span></td></tr>
+              <tr><th scope="row">Cost</th><td>Keep the parts already earning their keep.</td><td>Refactor</td></tr>
+              <tr><th scope="row">Simplicity</th><td>Fix the smallest thing that changes the outcome.</td><td>Refactor</td></tr>
+            </tbody>
+          </table>
+          <div class="verdicts">
+            <div><h4>Chairman’s verdict</h4><p>Refactor first. Revisit a rewrite when the measured constraints justify it.</p></div>
+            <div><h4>My take</h4><p>Start with the slowest path. Set a benchmark before changing the architecture.</p></div>
+          </div>
+        </article>
+        <article class="example-slide" id="example-product" aria-labelledby="product-question">
+          <h3 class="example-question" id="product-question">Should we launch now or add more features?</h3>
+          <table>
+            <caption class="sr-only">Product example: five independent perspectives</caption>
+            <thead><tr><th scope="col">Perspective</th><th scope="col">Recommendation</th><th scope="col">Position</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">User experience</th><td>Put the core workflow in real users’ hands.</td><td>Small beta</td></tr>
+              <tr><th scope="row">Engineering</th><td>Fix critical bugs. Save the extras for later.</td><td>Small beta</td></tr>
+              <tr class="dissent"><th scope="row">Brand</th><td>Polish onboarding before making a first impression.</td><td>Wait <span class="sr-only">— dissent</span></td></tr>
+              <tr><th scope="row">Growth</th><td>Learn which benefits actually bring people back.</td><td>Small beta</td></tr>
+              <tr><th scope="row">Support</th><td>Start with a group you can help personally.</td><td>Small beta</td></tr>
+            </tbody>
+          </table>
+          <div class="verdicts">
+            <div><h4>Chairman’s verdict</h4><p>Launch a small, supported beta. Fix onboarding friction before a wider release.</p></div>
+            <div><h4>My take</h4><p>Invite ten people with the problem. Watch them complete the core task before adding features.</p></div>
+          </div>
+        </article>
+        <article class="example-slide" id="example-naming" aria-labelledby="naming-question">
+          <h3 class="example-question" id="naming-question">Should we choose a descriptive or playful name?</h3>
+          <table>
+            <caption class="sr-only">Naming example: five independent perspectives</caption>
+            <thead><tr><th scope="col">Perspective</th><th scope="col">Recommendation</th><th scope="col">Position</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Clarity</th><td>Make the product’s purpose easy to understand.</td><td>Descriptive</td></tr>
+              <tr class="dissent"><th scope="row">Brand</th><td>A distinctive name gives people something to remember.</td><td>Playful <span class="sr-only">— dissent</span></td></tr>
+              <tr><th scope="row">Search</th><td>Check that people can find you by name.</td><td>Verify first</td></tr>
+              <tr><th scope="row">Language</th><td>Choose something easy to say, spell, and share.</td><td>Keep it simple</td></tr>
+              <tr><th scope="row">Positioning</th><td>Pair a memorable name with a clear descriptor.</td><td>Playful + clear</td></tr>
+            </tbody>
+          </table>
+          <div class="verdicts">
+            <div><h4>Chairman’s verdict</h4><p>Choose a memorable name with a plain-language descriptor. Check for conflicts before committing.</p></div>
+            <div><h4>My take</h4><p>Test three names with five likely users. Ask what each does, then which one they remember.</p></div>
+          </div>
+        </article>
+      </div>
+      <div class="example-footer">
+        <p>Example only. Your council’s recommendations depend on the question and evidence.</p>
+        <div class="carousel-controls" hidden>
+          <button class="icon-button" id="previous-example" type="button" aria-label="Previous example" disabled><svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11 4-6 6 6 6M5 10h11"/></svg></button>
+          <span id="example-position" aria-live="polite" aria-atomic="true">1 / 3</span>
+          <button class="icon-button" id="next-example" type="button" aria-label="Next example"><svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m9 4 6 6-6 6M4 10h11"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-section wrap" id="install" aria-labelledby="install-title">
+      <h2 id="install-title">Pull up a chair.</h2>
+      <p class="section-lead">Install the skill. Bring a question.</p>
+      <div class="install-tabs" role="tablist" aria-label="Choose your agent" hidden>
+        <button type="button" id="tab-claude" role="tab" aria-selected="true" aria-controls="panel-claude" data-install-tab="claude">Claude Code</button>
+        <button type="button" id="tab-codex" role="tab" aria-selected="false" aria-controls="panel-codex" tabindex="-1" data-install-tab="codex">Codex</button>
+        <button type="button" id="tab-other" role="tab" aria-selected="false" aria-controls="panel-other" tabindex="-1" data-install-tab="other">Other agents</button>
+      </div>
+      <section class="install-panel" id="panel-claude" aria-labelledby="heading-claude">
+        <h3 class="fallback-heading" id="heading-claude">Claude Code</h3>
+        <div class="command-block">
+          <pre><code id="commands-claude">/plugin marketplace add mattakins/council
+/plugin install council@mattakins</code></pre>
+          <button class="copy-button" type="button" data-copy="commands-claude" hidden><svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5H4v13h12V5h-3M7 3h6v4H7z"/></svg><span>Copy commands</span></button>
+        </div>
+        <p class="then-ask">Then ask</p>
+        <pre class="invocation"><code>/council:council should we rewrite this service?</code></pre>
+      </section>
+      <section class="install-panel" id="panel-codex" aria-labelledby="heading-codex">
+        <h3 class="fallback-heading" id="heading-codex">Codex</h3>
+        <div class="command-block">
+          <pre><code id="commands-codex">codex plugin marketplace add mattakins/council
+codex plugin add council@mattakins</code></pre>
+          <button class="copy-button" type="button" data-copy="commands-codex" hidden><svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5H4v13h12V5h-3M7 3h6v4H7z"/></svg><span>Copy commands</span></button>
+        </div>
+        <p class="then-ask">Then ask</p>
+        <pre class="invocation"><code>$council:council should we rewrite this service?</code></pre>
+      </section>
+      <section class="install-panel" id="panel-other" aria-labelledby="heading-other">
+        <h3 class="fallback-heading" id="heading-other">Other agents</h3>
+        <div class="command-block">
+          <pre><code id="commands-other">npx skills add mattakins/council -g</code></pre>
+          <button class="copy-button" type="button" data-copy="commands-other" hidden><svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5H4v13h12V5h-3M7 3h6v4H7z"/></svg><span>Copy commands</span></button>
+        </div>
+        <p class="then-ask">Then ask</p>
+        <pre class="invocation"><code>Use the council skill: should we rewrite this service?</code></pre>
+        <p class="agent-note">Select your agents in the installer. Or follow the <a href="https://github.com/mattakins/Council#standalone-install">standalone install instructions</a>.</p>
+      </section>
+      <p class="compatibility-note">Full behavior requires parallel, isolated subagents.</p>
+      <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
+
+      <div class="options">
+        <h3>Make it your council.</h3>
+        <dl>
+          <div><dt><code>quick</code></dt><dd>Skip the Chairman for a faster take.</dd></div>
+          <div><dt><code>deep</code></dt><dd>Research + seven advisors + Chairman.</dd></div>
+          <div><dt><code>3</code></dt><dd>Choose how many advisors join.</dd></div>
+          <div><dt><code>"SEO, legal, UX"</code></dt><dd>Choose the perspectives yourself.</dd></div>
+          <div><dt><code>no research</code></dt><dd>Reason from the context you provide.</dd></div>
+          <div><dt><code>save</code></dt><dd>Keep the complete result in Markdown.</dd></div>
+        </dl>
+        <p>Options combine. Plain language works, too.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-top">
+      <a class="wordmark" href="#" aria-label="Council home">council</a>
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/mattakins/Council/blob/main/plugins/council/skills/council/SKILL.md">Read the skill</a>
+        <a href="https://github.com/mattakins/Council">GitHub</a>
+        <a href="https://github.com/mattakins/Council/blob/main/LICENSE">MIT license</a>
+      </nav>
+    </div>
+    <p>Made by <a href="https://github.com/mattakins">Matt Akins</a>. Inspired by <a href="https://github.com/karpathy/llm-council">Karpathy’s LLM Council</a>.</p>
+  </footer>
+</body>
+</html>
