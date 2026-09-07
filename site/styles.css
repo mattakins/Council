@@ -143,7 +143,9 @@ pre code { font: inherit; }
   nav a { font-size: 15px; }
   .site-header nav a:first-child, .site-header .github-link { display: none; }
   .hero { grid-template-columns: 1fr; gap: 44px; padding-block: 55px 44px; }
-  h1 { font-size: clamp(44px, 10.5vw, 72px); }
+  h1 { font-size: clamp(28px, 9.5vw, 62px); }
+  .hero-ending { display: block; white-space: nowrap; }
+  .hero-desktop-break { display: none; }
   .hero-lead { font-size: 25px; margin-top: 28px; }
   .hero-description { max-width: 440px; margin-top: 20px; }
   .hero-actions { flex-direction: row; align-items: center; gap: 23px; margin-top: 26px; }
@@ -217,3 +219,5 @@ pre code { font: inherit; }
 .quick-install-note { font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
 #quick-install-copy { margin-top: 22px; }
 @media (max-width: 760px) { .quick-install { padding: 25px 20px; } .quick-install pre { font-size: 13px; padding: 14px; } }
+
+#quick-install-title:focus { outline: none; }
