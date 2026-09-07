@@ -116,6 +116,12 @@ The instruction format follows the open Agent Skills specification. Full behavio
 
 ---
 
+## Website
+
+The static website lives in [`site/`](site/). See the [preview and publishing guide](site/README.md).
+
+---
+
 ## License
 
 MIT
