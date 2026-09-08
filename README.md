@@ -1,8 +1,14 @@
-# Council
+[![Council — three robot advisors](site/assets/council-brand.png)](https://mattakins.github.io/Council/)
 
-A multi-agent decision framework skill for Codex, Claude Code, OpenCode, Cursor, ChatGPT Work, or any other harness that supports subagents.
+# Give your agent more perspectives.
 
-*Council* spawns parallel isolated expert advisor subagents with diverse perspectives, synthesizes their views through a neutral Chairman, and delivers an opinionated final take.
+**Five independent advisors. One clear recommendation.**
+
+Council is a skill that helps you make decisions. Ask a question about your project. Five independent advisors weigh in. The Chairman brings it all together. Your agent adds its own take and next step.
+
+[Website](https://mattakins.github.io/Council/) · [Install](#install) · [See examples](https://mattakins.github.io/Council/#examples)
+
+Works with Codex, Claude Code, OpenCode, Cursor, ChatGPT Work, and other harnesses that support parallel, isolated subagents.
 
 Use it for architectural calls, product and marketing decisions, naming debates — any decision worth more than one perspective.
 
