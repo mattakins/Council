@@ -1,4 +1,4 @@
-[![Council — three robot advisors](site/assets/council-brand.png)](https://mattakins.github.io/Council/)
+[![Council — robot advisors and wordmark](site/assets/council-banner.png)](https://mattakins.github.io/Council/)
 
 # Give your agent more perspectives.
 
