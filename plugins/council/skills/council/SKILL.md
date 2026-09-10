@@ -152,13 +152,27 @@ Analyze these perspectives and provide:
 Be definitive. This is the final recommendation. Under 200 words.
 ```
 
-Display the Chairman's output under the heading "**Chairman's Verdict:**" before proceeding to step 4.
+Keep the Chairman's output for the final ordering in step 4.
 
 ### 4. Synthesize results
 
-Compile agent responses into this format:
+Compile agent responses in this exact order:
 
-**Results table:**
+```markdown
+# [Rephrased user question]
+
+## Yes — [succinct verdict]
+```
+
+- Rephrase the user's core question as the H1. Do not use the literal text "Rephrased user question."
+- Put the direct answer in the H2 itself; do not add a separate `Verdict` heading.
+- For yes/no questions, begin the H2 with `Yes —` or `No —`, followed by the concise reason.
+- For choices among multiple options, begin the H2 with the winning option, followed by `—` and the concise reason (for example, `AWS — [reason]`).
+- For non-binary questions, make the H2 a direct, succinct recommendation.
+- Follow the H2 immediately with the results table, then the Chairman's verdict, then the remaining sections below.
+
+### Results
+
 ```
 | Agent | Perspective | Recommendation | Confidence |
 |-------|-------------|----------------|------------|
@@ -170,6 +184,11 @@ Compile agent responses into this format:
 
 - ✅ = matches the consensus/winning recommendation
 - ⚠️ = dissent (strongly disagrees with majority)
+
+### Chairman's Verdict
+
+- Place the Chairman's complete output here when enabled.
+- Omit this section when the Chairman is disabled.
 
 **Consensus section:**
 - What points do agents agree on?
