@@ -74,7 +74,7 @@ Do NOT require an explicit `research` flag. Infer from the question whether agen
 - Commercial viability, go-to-market, fundraising, or investment
 - Anything where a factual, up-to-date answer is better than reasoning alone
 
-When you auto-enable research, tell the user up front that each advisor will do research independently — then spawn the advisors.
+When you auto-enable research, tell the user up front that each advisor will do research independently (but do not use the phrase auto-enable) — then spawn the advisors.
 
 If the question is clearly conceptual or internal (architecture choices, code design, naming, etc.), skip research.
 
