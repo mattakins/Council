@@ -6,11 +6,11 @@
 
 Council is a skill that helps you make decisions. Ask a question about your project. Five independent advisors weigh in. The Chairman brings it all together. Your agent adds its own take and next step.
 
+Use it for architectural calls, product and marketing decisions, naming debates — any decision worth more than one perspective.
+
 [Website](https://mattakins.github.io/Council/) · [Install](#install) · [See examples](https://mattakins.github.io/Council/#examples)
 
 Works with Codex, Claude Code, OpenCode, Cursor, ChatGPT Work, and other harnesses that support parallel, isolated subagents.
-
-Use it for architectural calls, product and marketing decisions, naming debates — any decision worth more than one perspective.
 
 Inspired by [Karpathy's LLM Council](https://github.com/karpathy/llm-council).
 
@@ -119,12 +119,6 @@ Next step: ...
 | Other harnesses | Conditional | Requires parallel subagent support |
 
 The instruction format follows the open Agent Skills specification. Full behavior requires a harness that can launch parallel, isolated subagents.
-
----
-
-## Website
-
-The static website lives in [`site/`](site/). See the [preview and publishing guide](site/README.md).
 
 ---
 
