@@ -214,7 +214,7 @@ This section is MANDATORY — always include it as the final section, clearly la
 Give your own synthesized, opinionated recommendation — distinct from the Chairman's neutral verdict. Draw on the council outputs, any conversation context available, and anything the agents may not have had visibility into. If this is the first message in the session, base it purely on the council outputs.
 
 **Format:**
-> **My Take:** [Your direct recommendation. 2-4 sentences. Be opinionated.]
+**My Take:** [Your direct recommendation. 2-4 sentences. Be opinionated.]
 
 If your take differs from the Chairman's verdict, explicitly flag it:
 > ⚡ **Differs from Chairman:** [One sentence on why]
